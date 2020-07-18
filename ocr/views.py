@@ -25,7 +25,6 @@ class PostViews(APIView):
         if posts_serializer.is_valid():
             uploaded = posts_serializer.save()
             process = Popen(['ocrmypdf', uploaded.file.path, 'output.pdf'])
-            posts_serializer.save()
             return Response(posts_serializer.data, status=status.HTTP_201_CREATED)
         else:
             print('error', posts_serializer.errors)
