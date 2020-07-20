@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # ----SECUIRITY---- 
-SECRET_KEY = os.environ.get('DJANGO_BACKEND_TUTORIAL_SECRET_KEY')
+SECRET_KEY = os.environ.get('DJANGO_BACKEND_TUTORIAL_SECRET_KEY', '(93^ggrz8y&%rp6#8izypahg4^yuaf^@j=(v%(4=-5q29d=85j')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -28,7 +28,7 @@ DEBUG = False
 CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ['.herokuapp.com']
 
-
+ .
 # Application definition
 
 INSTALLED_APPS = [
