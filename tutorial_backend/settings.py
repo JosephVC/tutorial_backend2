@@ -28,7 +28,6 @@ DEBUG = False
 CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ['.herokuapp.com']
 
- .
 # Application definition
 
 INSTALLED_APPS = [
