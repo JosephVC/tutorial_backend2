@@ -22,6 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # ----SECUIRITY---- 
 SECRET_KEY = os.environ.get('DJANGO_BACKEND_TUTORIAL_SECRET_KEY')
 
+#heroku settings for SECRET KEY
+heroku config:set DJANGO_SECRET_KEY=`thisismysecretkey`
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
