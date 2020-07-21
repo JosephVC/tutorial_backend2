@@ -23,10 +23,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_BACKEND_TUTORIAL_SECRET_KEY', '(93^ggrz8y&%rp6#8izypahg4^yuaf^@j=(v%(4=-5q29d=85j')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-CORS_ORIGIN_ALLOW_ALL = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+
 ALLOWED_HOSTS = ['.herokuapp.com']
+CSRF_COOKIE_SECURE = 'True'
+SECURE_REFERRER_POLICY = 'origin'
+SECURE_SSL_REDIRECT= True
+SESSION_COOKIE_SECURE = True
+
+# NOTE: CORS was set to specify a whitelist, but this caused runserver to goof
+# changing CORS to ALLOW_ALL allows things to run
+# This enables all API requests from a different server to be allowed. 
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
