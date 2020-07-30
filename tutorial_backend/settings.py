@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # ----SECUIRITY---- 
-SECRET_KEY = os.environ.get('DJANGO_BACKEND_TUTORIAL_SECRET_KEY', 'backend-secret-key')
+SECRET_KEY = os.environ.get('DJANGO_BACKEND_TUTORIAL_SECRET_KEY', 'backend-heroku-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
