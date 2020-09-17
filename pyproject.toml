@@ -16,6 +16,7 @@ django-cors-headers = "^3.4.0"
 whitenoise = "^5.1.0"
 pytesseract = "^0.3.4"
 ghostscript = "^0.6"
+django-storages = "^1.10.1"
 
 [tool.poetry.dev-dependencies]
 
