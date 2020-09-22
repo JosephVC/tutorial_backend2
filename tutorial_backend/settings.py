@@ -157,7 +157,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 AWS_LOCATION = 'static'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'tutorial_backend2/static'),
+    os.path.join(BASE_DIR, 'mysite/static'),
 ]
 
 # https://ocr-backend-bucket.s3.amazonaws.com
