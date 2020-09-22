@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'ocr',
     'whitenoise',
+    'storages',
 ]
 
 REST_FRAMEWORK = {
