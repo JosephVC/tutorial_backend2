@@ -157,11 +157,11 @@ AWS_S3_OBJECT_PARAMETERS = {
 AWS_LOCATION = 'static'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'mysite/static'),
+    os.path.join(BASE_DIR, 'tutorial_backend2/static'),
 ]
 
 # https://ocr-backend-bucket.s3.amazonaws.com
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'tutorial_backend2.backends.s3boto3.S3Boto3Storage'
 AWS_DEFAULT_ACL = None
