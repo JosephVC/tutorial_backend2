@@ -27,8 +27,13 @@ SECRET_KEY = os.environ.get('DJANGO_BACKEND_TUTORIAL_SECRET_KEY', 'backend-herok
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 DEBUG = True
 
+<<<<<<< HEAD
+# ALLOWED_HOSTS = ['localhost','.herokuapp.com']
+# CSRF_COOKIE_SECURE = True
+=======
 # ALLOWED_HOSTS = ['localhost', '.herokuapp.com']
 # CSRF_COOKIE_SECURE = 'True'
+>>>>>>> main
 # SECURE_REFERRER_POLICY = 'origin'
 # SECURE_SSL_REDIRECT= True
 # SESSION_COOKIE_SECURE = True
@@ -161,9 +166,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 AWS_LOCATION = 'static'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'mysite/static'),
-]
+
 
 
 # https://ocr-backend-bucket.s3.amazonaws.com
