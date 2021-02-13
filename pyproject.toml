@@ -18,6 +18,7 @@ pytesseract = "^0.3.4"
 ghostscript = "^0.6"
 django-storages = "^1.10.1"
 boto3 = "^1.14.63"
+django-admin-honeypot = "^1.1.0"
 
 [tool.poetry.dev-dependencies]
 
