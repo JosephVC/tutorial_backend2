@@ -62,6 +62,9 @@ cryptography==3.4.4; python_version >= "3.6" \
 dj-database-url==0.5.0 \
     --hash=sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163 \
     --hash=sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9
+django-admin-honeypot==1.1.0 \
+    --hash=sha256:e18a52832b82740917737873c6f34117d15631565e9e4b7dbb9df48a29250796 \
+    --hash=sha256:88e72753f5cbda88d909292d9f3fe7741fb74a8afad083f96e86114238f9b364
 django-cors-headers==3.7.0; python_version >= "3.6" \
     --hash=sha256:96069c4aaacace786a34ee7894ff680780ec2644e4268b31181044410fecd12e \
     --hash=sha256:1ac2b1213de75a251e2ba04448da15f99bcfcbe164288ae6b5ff929dc49b372f
