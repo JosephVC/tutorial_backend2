@@ -27,8 +27,13 @@ SECRET_KEY = os.environ.get('DJANGO_BACKEND_TUTORIAL_SECRET_KEY', 'backend-herok
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 DEBUG = True
 
+<<<<<<< HEAD
 # ALLOWED_HOSTS = ['localhost','.herokuapp.com']
 # CSRF_COOKIE_SECURE = True
+=======
+# ALLOWED_HOSTS = ['localhost', '.herokuapp.com']
+# CSRF_COOKIE_SECURE = 'True'
+>>>>>>> main
 # SECURE_REFERRER_POLICY = 'origin'
 # SECURE_SSL_REDIRECT= True
 # SESSION_COOKIE_SECURE = True
@@ -52,6 +57,9 @@ INSTALLED_APPS = [
     'ocr',
     'whitenoise',
     'storages',
+
+    # django-admin-honeypot
+    'admin_honeypot',
 ]
 
 REST_FRAMEWORK = {
