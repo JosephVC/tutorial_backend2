@@ -116,4 +116,4 @@ GitHub.sublime-settings
 .history
 
 # .pyc files being added for unknown reasons
-tutorial_backend/__pycache_/*
+*/__pycache_/*
