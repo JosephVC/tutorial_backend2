@@ -27,13 +27,8 @@ SECRET_KEY = os.environ.get('DJANGO_BACKEND_TUTORIAL_SECRET_KEY', 'backend-herok
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 DEBUG = True
 
-<<<<<<< HEAD
 # ALLOWED_HOSTS = ['localhost','.herokuapp.com']
 # CSRF_COOKIE_SECURE = True
-=======
-# ALLOWED_HOSTS = ['localhost', '.herokuapp.com']
-# CSRF_COOKIE_SECURE = 'True'
->>>>>>> main
 # SECURE_REFERRER_POLICY = 'origin'
 # SECURE_SSL_REDIRECT= True
 # SESSION_COOKIE_SECURE = True
@@ -151,7 +146,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-STATIC_ROOT = 'static'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
