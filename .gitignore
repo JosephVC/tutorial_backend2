@@ -115,4 +115,5 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
- tutorial_backend/__pycache_/*
+# .pyc files being added for unknown reasons
+tutorial_backend/__pycache_/*
