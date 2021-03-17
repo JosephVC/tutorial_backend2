@@ -35,11 +35,11 @@ SECRET_KEY = os.getenv('DJANGO_BACKEND_TUTORIAL_SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
-CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
-SECURE_REFERRER_POLICY = 'origin'
-SECURE_SSL_REDIRECT= True
-SESSION_COOKIE_SECURE = True
+# SECURE_REFERRER_POLICY = 'origin'
+# SECURE_SSL_REDIRECT= True
+# SESSION_COOKIE_SECURE = True
 
 # NOTE: CORS was set to specify a whitelist, but this caused runserver to goof
 # changing CORS to ALLOW_ALL allows things to run
