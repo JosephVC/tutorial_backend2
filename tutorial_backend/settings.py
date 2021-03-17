@@ -10,7 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+# Import package to work with Django
 import django_heroku
+
+# import python-dotenv to handle our environment variables
+from datetime import timedelta
 
 from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env.import os
