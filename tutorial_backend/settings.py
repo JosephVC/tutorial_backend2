@@ -26,7 +26,9 @@ SECRET_KEY = os.getenv('DJANGO_BACKEND_TUTORIAL_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
-DEBUG = os.getenv('DEBUG')
+# DEBUG = os.getenv('DEBUG')
+
+DEBUG = True
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
 CSRF_COOKIE_SECURE = True
