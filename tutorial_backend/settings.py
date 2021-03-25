@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
+
+# Import package to work with Django
 import django_heroku
 
 from dotenv import load_dotenv
@@ -19,10 +21,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
 # ----SECUIRITY---- 
 SECRET_KEY = os.getenv('DJANGO_BACKEND_TUTORIAL_SECRET_KEY')
 
@@ -32,6 +30,7 @@ DEBUG = os.getenv('DJANGO_DEBUG')
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
 # CSRF_COOKIE_SECURE = True
+
 # SECURE_REFERRER_POLICY = 'origin'
 # SECURE_SSL_REDIRECT= True
 # SESSION_COOKIE_SECURE = True
@@ -146,7 +145,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/staticfiles/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STATIC_ROOT = 'static'
@@ -155,8 +154,8 @@ django_heroku.settings(locals())
 
 #AWS settings
 AWS_ACCESS_KEY_ID = os.getenv('TUTORIAL_AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('TUTORIAL_AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = 'AWS_STORAGE_BUCKET_NAME'
+AWS_SECRET_ACCESS_KEY = os.getenv('TUTORIAL_AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
@@ -166,8 +165,10 @@ AWS_LOCATION = 'static'
 
 
 
+# ACCESS_POINT_ARN = arn:aws:s3:us-west-2:443126391730:accesspoint/django_backend_access
+AWS_LOCATION = 'static'
 # https://ocr-backend-bucket.s3.amazonaws.com
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+# STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_DEFAULT_ACL = None
