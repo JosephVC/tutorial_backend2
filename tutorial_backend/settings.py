@@ -10,6 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 import django_heroku
+
+from dotenv import load_dotenv
+load_dotenv()  # take environment variables from .env.
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -20,14 +24,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # ----SECUIRITY---- 
-SECRET_KEY = os.environ.get('DJANGO_BACKEND_TUTORIAL_SECRET_KEY', 'backend-heroku-secret-key')
+SECRET_KEY = os.getenv('DJANGO_BACKEND_TUTORIAL_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
-DEBUG = True
+DEBUG = os.getenv('DJANGO_DEBUG')
 
-# ALLOWED_HOSTS = ['localhost','.herokuapp.com']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
 # CSRF_COOKIE_SECURE = True
 # SECURE_REFERRER_POLICY = 'origin'
 # SECURE_SSL_REDIRECT= True
@@ -146,14 +149,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
+STATIC_ROOT = 'static'
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
 #AWS settings
-AWS_ACCESS_KEY_ID = os.environ.get('TUTORIAL_AWS_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_ID = os.getenv('TUTORIAL_AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('TUTORIAL_AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = 'django-ocr-tutorial-bucket'
+AWS_STORAGE_BUCKET_NAME = 'AWS_STORAGE_BUCKET_NAME'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
