@@ -1,31 +1,28 @@
 [tool.poetry]
-name = "tutorial_backend"
+name = "tutorial_backend2"
 version = "0.1.0"
-description = "the django backend to this tutorial"
-authors = ["Your Name <you@example.com>"]
+description = "Django backend environment based on my own tutorial"
+authors = ["JosephVC <josephvcardenas@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-gunicorn = "^20.0.4"
-OCRmyPDF = "^10.2.0"
-django = "^3.0.8"
-djangorestframework = "^3.11.0"
+Django = "^3.1.7"
+djangorestframework = "^3.12.4"
+gunicorn = "^20.1.0"
+ocrmypdf = "^11.7.3"
 django-heroku = "^0.3.1"
-django-cors-headers = "^3.4.0"
-whitenoise = "^5.1.0"
-pytesseract = "^0.3.4"
-ghostscript = "^0.6"
-django-storages = "^1.10.1"
-boto3 = "^1.14.63"
+django-cors-headers = "^3.7.0"
+whitenoise = "^5.2.0"
+pytesseract = "^0.3.7"
+ghostscript = "^0.7"
+django-storages = "^1.11.1"
+boto3 = "^1.17.41"
 django-admin-honeypot = "^1.1.0"
-
-django-dotenv = "^1.4.2"
-
-python-dotenv = "^0.15.0"
+python-dotenv = "^0.16.0"
 
 [tool.poetry.dev-dependencies]
 
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
