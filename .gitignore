@@ -117,4 +117,4 @@ GitHub.sublime-settings
 
 # .pyc files being added for unknown reasons
 */__pycache_/*
-.pyc
+*.pyc
