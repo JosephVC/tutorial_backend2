@@ -25,7 +25,7 @@ class PostViews(APIView):
         posts_serializer = FileSerializer(data=request.data)
         if posts_serializer.is_valid():
             uploaded = posts_serializer.save()
-            process = Popen(['ocrmypdf', uploaded.file.path, 'output.pdf'])
+            process = Popen(['ocrmypdf', uploaded.file.path, 'output.pdf'], cwd="../media/post_files")
             posts_serializer.save(process)
 
             return Response(posts_serializer.data, status=status.HTTP_201_CREATED)
