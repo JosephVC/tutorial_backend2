@@ -20,6 +20,7 @@ django-storages = "^1.11.1"
 boto3 = "^1.17.41"
 django-admin-honeypot = "^1.1.0"
 python-dotenv = "^0.16.0"
+httpie = "^2.4.0"
 
 [tool.poetry.dev-dependencies]
 

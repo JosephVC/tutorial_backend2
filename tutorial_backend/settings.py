@@ -148,7 +148,7 @@ USE_TZ = True
 # STATIC_URL = '/staticfiles/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-STATIC_ROOT = 'static'
+# STATIC_ROOT = 'static'
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
@@ -156,17 +156,16 @@ django_heroku.settings(locals())
 AWS_ACCESS_KEY_ID = os.getenv('TUTORIAL_AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.getenv('TUTORIAL_AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-AWS_S3_OBJECT_PARAMETERS = {
-    'CacheControl': 'max-age=86400',
-}
-AWS_LOCATION = 'static'
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+# AWS_S3_OBJECT_PARAMETERS = {
+#     'CacheControl': 'max-age=86400',
+# }
+# AWS_LOCATION = 'static'
 
 
 
 
 # ACCESS_POINT_ARN = arn:aws:s3:us-west-2:443126391730:accesspoint/django_backend_access
-AWS_LOCATION = 'static'
 # https://ocr-backend-bucket.s3.amazonaws.com
 # STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
